@@ -20,7 +20,6 @@ export async function fetchCurrentWeather(coordinates) {
     const [data, error] = await handleAsync(axios.get(url));
     if (error) return handleError(error);
 
-    console.log("Weather API Response:", data?.data);
     return data?.data;
 }
 
@@ -41,7 +40,6 @@ async function saveLocation(weatherData) {
     if (error) return handleError(error);
 
     handleSuccess(data);
-    console.log("Save location Response:", data?.data);
     return data?.data;
 }
 

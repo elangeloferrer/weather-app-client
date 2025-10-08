@@ -10,7 +10,6 @@ function DraggableMarker({ position, onChange }) {
                 const marker = markerRef.current;
                 if (marker) {
                     const newPosition = marker.getLatLng();
-                    console.log("Dragged-end coordinates:", newPosition);
                     onChange(newPosition);
                 }
             },
