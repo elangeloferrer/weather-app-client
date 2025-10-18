@@ -3,7 +3,7 @@ import { notify } from "./toastify";
 export function handleSuccess(response, customMessage = null) {
     // Log full response in dev mode for debugging
     if (import.meta.env.DEV) {
-        console.log("Success Response:", response);
+        console.info("Success Response:", response);
     }
 
     let message = "Action completed successfully.";
