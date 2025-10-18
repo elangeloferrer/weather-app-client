@@ -105,14 +105,14 @@ export default function Map() {
                     )}
                 </div>
 
-                <div className="mt-2 flex justify-center">
+                {/* <div className="mt-2 flex justify-center">
                     <button
                         onClick={() => saveLocation(weatherData)}
                         className="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
                     >
                         Save Location
                     </button>
-                </div>
+                </div> */}
             </div>
 
             {/* Weather Info Section */}
