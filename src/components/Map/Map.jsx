@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { handleAsync } from "../../utils/handleAsync";
@@ -8,6 +9,15 @@ import { handleSuccess } from "../../utils/handleSuccess";
 import LocationMarker from "./LocationMarker";
 import DraggableMarker from "./DraggableMarker";
 import WeatherCard from "./WeatherCard";
+
+// Fix Leaflet icon paths
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl:
+        "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+    iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+    shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+});
 
 const defaultCenter = { lat: 12.8797, lng: 121.774 };
 
